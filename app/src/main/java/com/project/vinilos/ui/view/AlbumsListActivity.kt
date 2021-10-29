@@ -27,6 +27,11 @@ class AlbumsListActivity : AppCompatActivity() {
         albumViewModel.isLoading.observe(this, Observer {
             binding.loading.isVisible = it
         })
+
+        albumViewModel.album.observe(this, Observer {
+            adapter.albums = it
+            adapter.notifyDataSetChanged()
+        })
     }
 
     private fun initRecyclerView(){

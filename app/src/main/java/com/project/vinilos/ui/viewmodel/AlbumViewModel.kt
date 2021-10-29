@@ -21,7 +21,7 @@ class AlbumViewModel : ViewModel() {
             val result = getAlbumsUseCase()
 
             if (!result.isNullOrEmpty()){
-                album.postValue(result)
+                album.value = result
                 isLoading.postValue(false)
             }
         }
