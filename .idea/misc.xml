@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/album_border.xml" value="0.26564102564102565" />
         <entry key="app/src/main/res/drawable/login_button.xml" value="0.36018518518518516" />
+        <entry key="app/src/main/res/layout/action_bar_toolbar.xml" value="0.286231884057971" />
         <entry key="app/src/main/res/layout/activity_albums.xml" value="0.25987841945288753" />
         <entry key="app/src/main/res/layout/activity_albums_list.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/item_album.xml" value="0.266304347826087" />
+        <entry key="app/src/main/res/layout/item_album.xml" value="0.4360086767895879" />
       </map>
     </option>
   </component>

@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.data.model.Album
 import com.project.vinilos.databinding.ActivityAlbumsListBinding
 import com.project.vinilos.ui.viewmodel.AlbumViewModel
+import androidx.appcompat.widget.Toolbar
+import com.project.vinilos.R
+
 
 class AlbumsListActivity : AppCompatActivity() {
     private lateinit var binding : ActivityAlbumsListBinding
@@ -32,6 +35,11 @@ class AlbumsListActivity : AppCompatActivity() {
             adapter.albums = it
             adapter.notifyDataSetChanged()
         })
+
+        val toolbar : Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "Vinilos App"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun initRecyclerView(){

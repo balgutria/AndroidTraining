@@ -13,7 +13,11 @@
         android:theme="@style/Theme.Vinilos">
         <activity
             android:name=".ui.view.AlbumsListActivity"
-            android:exported="true" />
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.view.MainActivity" />
+        </activity>
         <activity
             android:name=".ui.view.MainActivity"
             android:exported="true">
