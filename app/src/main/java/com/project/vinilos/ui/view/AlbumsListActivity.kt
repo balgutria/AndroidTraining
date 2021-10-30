@@ -39,6 +39,7 @@ class AlbumsListActivity : AppCompatActivity() {
         val toolbar : Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Vinilos App"
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 

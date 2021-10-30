@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitHelper {
     fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://vinillos-default-rtdb.firebaseio.com")
+            .baseUrl("https://vinyl-miso.herokuapp.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

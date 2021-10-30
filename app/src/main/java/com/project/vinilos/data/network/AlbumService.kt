@@ -13,7 +13,6 @@ class AlbumService {
     suspend fun getAlbums():List<Album> {
         return withContext(Dispatchers.IO) {
             val response = retrofit.create(AlbumApiClient::class.java).getAllAlbums()
-            Log.d("RESPONSE", response.body().toString())
             response.body() ?: emptyList()
         }
     }

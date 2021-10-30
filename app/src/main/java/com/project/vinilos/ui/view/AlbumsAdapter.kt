@@ -7,15 +7,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.project.vinilos.R
 import com.project.vinilos.data.model.Album
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_album.view.*
+import java.text.SimpleDateFormat
 
 class AlbumsAdapter(var albums:List<Album>):RecyclerView.Adapter<AlbumsAdapter.AlbumHolder>(){
     class AlbumHolder(val view:View):RecyclerView.ViewHolder(view){
         fun render(album:Album){
             view.tvAlbumTitle.text = album.name
-            view.tvAlbumArtist.text = album.artist
-            view.tvAlbumYear.text = album.releaseDate
-            view.tvAlbumType.text = album.cover
+            view.tvAlbumArtist.text = album.recordLabel
+            view.tvAlbumYear.text = SimpleDateFormat("yyyy").format(album.releaseDate)
+            view.tvAlbumType.text = album.genre
+            Picasso.get().load(album.cover).into(view.ivAlbumCover)
         }
     }
 
