@@ -22,14 +22,14 @@ import org.junit.runner.RunWith
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
-class MainActivityTest2 {
+class MainActivityTest {
 
     @Rule
     @JvmField
     var mActivityTestRule = ActivityTestRule(MainActivity::class.java)
 
     @Test
-    fun mainActivityTest2() {
+    fun mainActivityTest() {
         val button = onView(
             allOf(
                 withId(R.id.collector_button), withText("Coleccionista"),
