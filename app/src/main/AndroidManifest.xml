@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vinilos">
         <activity
+            android:name=".ui.view.AlbumDetailsActivity"
+            android:parentActivityName=".ui.view.AlbumsListActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".ui.view.AlbumsListActivity"
             android:exported="true">
             <meta-data

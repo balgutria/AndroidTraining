@@ -1,6 +1,8 @@
 package com.project.vinilos.ui.view
 
+import android.content.Intent
 import android.os.Bundle
+import java.io.Serializable
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -13,7 +15,7 @@ import androidx.appcompat.widget.Toolbar
 import com.project.vinilos.R
 
 
-class AlbumsListActivity : AppCompatActivity() {
+class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListener {
     private lateinit var binding : ActivityAlbumsListBinding
     private val albumViewModel: AlbumViewModel by viewModels()
 
@@ -44,8 +46,15 @@ class AlbumsListActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView(){
-        adapter = AlbumsAdapter(albumsList)
+        adapter = AlbumsAdapter(albumsList, this)
         binding.rvAlbums.layoutManager = LinearLayoutManager(this)
         binding.rvAlbums.adapter = adapter
+    }
+
+    override fun onItemClick(album: Album) {
+        val intent = Intent(this, AlbumDetailsActivity::class.java)
+        intent.putExtra("extra_object", album as Serializable)
+        startActivity(intent)
+
     }
 }
