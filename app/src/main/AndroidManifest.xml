@@ -13,9 +13,10 @@
         android:theme="@style/Theme.Vinilos">
         <activity
             android:name=".ui.view.AlbumDetailsActivity"
+            android:exported="true"
             android:parentActivityName=".ui.view.AlbumsListActivity"
-            android:exported="true" />
-
+            android:label="@string/title_activity_scrolling_album_details"
+            android:theme="@style/Theme.Vinilos.NoActionBar" />
         <activity
             android:name=".ui.view.AlbumsListActivity"
             android:exported="true">

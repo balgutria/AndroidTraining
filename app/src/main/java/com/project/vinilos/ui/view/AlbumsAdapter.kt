@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.project.vinilos.R
 import com.project.vinilos.data.model.Album
+import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_album.view.*
 import java.text.SimpleDateFormat
@@ -23,7 +24,9 @@ class AlbumsAdapter(
             view.tvAlbumArtist.text = album.recordLabel
             view.tvAlbumYear.text = SimpleDateFormat("yyyy").format(album.releaseDate)
             view.tvAlbumType.text = album.genre
-            Picasso.get().load(album.cover).into(view.ivAlbumCover)
+            Picasso.get().load(album.cover)
+                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
+                .into(view.ivAlbumCover)
         }
 
         init {
