@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.project.vinilos.data.model.Album
 import com.project.vinilos.domain.GetAlbumsUseCase
-import com.project.vinilos.domain.GetRandomAlbumUseCase
 import kotlinx.coroutines.launch
 
 class AlbumViewModel : ViewModel() {
@@ -13,7 +12,6 @@ class AlbumViewModel : ViewModel() {
     val album = MutableLiveData<List<Album>>()
 
     val getAlbumsUseCase = GetAlbumsUseCase()
-    // val getRandomAlbumUseCase = GetRandomAlbumUseCase()
 
     fun onCreate() {
         viewModelScope.launch {
