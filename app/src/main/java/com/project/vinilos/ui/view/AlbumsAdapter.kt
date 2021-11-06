@@ -3,13 +3,11 @@ package com.project.vinilos.ui.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.project.vinilos.R
-import com.project.vinilos.data.model.Album
-import com.squareup.picasso.MemoryPolicy
+import com.project.vinilos.data.models.Album
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.MemoryPolicy
 import kotlinx.android.synthetic.main.item_album.view.*
 import java.text.SimpleDateFormat
 

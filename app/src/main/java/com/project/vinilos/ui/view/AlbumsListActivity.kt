@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.project.vinilos.data.model.Album
+import com.project.vinilos.data.models.Album
 import com.project.vinilos.databinding.ActivityAlbumsListBinding
 import com.project.vinilos.ui.viewmodel.AlbumViewModel
 import androidx.appcompat.widget.Toolbar

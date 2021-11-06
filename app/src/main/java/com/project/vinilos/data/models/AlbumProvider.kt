@@ -1,4 +1,4 @@
-package com.project.vinilos.data.model
+package com.project.vinilos.data.models
 
 class AlbumProvider {
     companion object {
