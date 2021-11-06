@@ -2,6 +2,8 @@ package com.project.vinilos.ui.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import java.io.Serializable
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -55,6 +57,19 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
         val intent = Intent(this, AlbumDetailsActivity::class.java)
         intent.putExtra("extra_object", album as Serializable)
         startActivity(intent)
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.toolbar_options_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.logout) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

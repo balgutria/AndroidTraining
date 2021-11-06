@@ -1,7 +1,10 @@
 package com.project.vinilos.ui.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.TextView
 import com.project.vinilos.R
 import com.project.vinilos.data.models.Album
@@ -34,5 +37,19 @@ class AlbumDetailsActivity : AppCompatActivity() {
 
         val artist = findViewById<TextView>(R.id.tvAlbumDetailsArtist)
         artist.text = album.recordLabel
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.toolbar_options_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.logout) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }
