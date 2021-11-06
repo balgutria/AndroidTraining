@@ -3,7 +3,7 @@ package com.project.vinilos.ui.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.project.vinilos.data.model.Album
+import com.project.vinilos.data.models.Album
 import com.project.vinilos.domain.GetAlbumsUseCase
 import kotlinx.coroutines.launch
 

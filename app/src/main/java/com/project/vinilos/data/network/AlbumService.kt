@@ -1,9 +1,7 @@
 package com.project.vinilos.data.network
 
-import android.util.Log
-import android.util.Log.INFO
 import com.project.vinilos.core.RetrofitHelper
-import com.project.vinilos.data.model.Album
+import com.project.vinilos.data.models.Album
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.project.vinilos.R
-import com.project.vinilos.data.model.Album
+import com.project.vinilos.data.models.Album
 
 class AlbumDetailsActivity : AppCompatActivity() {
     
