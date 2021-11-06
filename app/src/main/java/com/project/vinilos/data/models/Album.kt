@@ -1,5 +1,6 @@
 package com.project.vinilos.data.models
 
+import java.io.Serializable
 import java.sql.Timestamp
 
 data class Album (
@@ -13,4 +14,4 @@ data class Album (
     val tracks : List<Tracks>,
     val performers : List<Performers>,
     val comments : List<Comments>
-)
+) : Serializable
