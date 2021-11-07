@@ -37,6 +37,20 @@ class AlbumDetailsActivity : AppCompatActivity() {
 
         val artist = findViewById<TextView>(R.id.tvAlbumDetailsArtist)
         artist.text = album.recordLabel
+
+    if (album.tracks.isNotEmpty()) {
+    val nameTracks = findViewById<TextView>(R.id.tvTrackTitle)
+    nameTracks.text = album.tracks[0].name
+
+    val nameDuration = findViewById<TextView>(R.id.tvTrackDuration)
+    nameDuration.text = album.tracks[0].duration
+
+    val nameArtist = findViewById<TextView>(R.id.tvTrackArtist)
+    nameArtist.text = album.tracks[0].name
+    }else{
+        val nameTracks = findViewById<TextView>(R.id.tvTrackTitle)
+        nameTracks.text =  "El Artista no tiene pistas asociadas"
+    }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
